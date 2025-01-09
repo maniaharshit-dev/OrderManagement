@@ -63,7 +63,13 @@ public class Main {
 
         // Create a seasonal discount of 10%
         DISCOUNTABLE seasonalDiscount = new SeasonalDiscount(0.10); // 10% discount
+        DISCOUNTABLE bulkDiscount = new BulkDiscount(0.15, 10); // 15% off for 10 or more items
 
+        double pricePerItem = 100.00; // Price of one item
+
+        double finalPrice = bulkDiscount.applyDiscount(pricePerItem);
+
+        System.out.println("Final price after discount: " + finalPrice);
         // Apply the seasonal discount to the total amount
         order.applyDiscount(seasonalDiscount);
 
