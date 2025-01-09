@@ -69,7 +69,7 @@ public class Main {
 
         double finalPrice = bulkDiscount.applyDiscount(pricePerItem);
 
-        System.out.println("Final price after discount: " + finalPrice);
+        System.out.println("Final price after bulk discount: " + finalPrice);
         // Apply the seasonal discount to the total amount
         order.applyDiscount(seasonalDiscount);
 
