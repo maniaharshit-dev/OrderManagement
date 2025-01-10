@@ -1,6 +1,9 @@
 package org.example;
 
+// May use lombok's allargsconstructor and getters and setters
 public abstract class ConstructionMaterial {
+
+//  Mark non-modifiable field as final, if present.
     private String id;
     private String name;
     private double price;

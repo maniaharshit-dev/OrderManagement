@@ -1,5 +1,6 @@
 package org.example;
 
+// May use lombok
 public class Customer {
     private String id;
     private String name;
