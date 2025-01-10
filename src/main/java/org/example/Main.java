@@ -31,12 +31,16 @@ public class Main {
         while (true) {
             System.out.println("\nEnter the product ID to add to your order (or type 'done' to finish): ");
             String productId = scanner.nextLine();
+
+            //Stop if user writes done
             if (productId.equalsIgnoreCase("done")) {
                 break;
             }
 
+
             ConstructionMaterial selectedMaterial = null;
             for (ConstructionMaterial material : materials) {
+            //Proceed only if
                 if (material.getId().equalsIgnoreCase(productId)) {
                     selectedMaterial = material;
                     break;
@@ -47,8 +51,10 @@ public class Main {
                 System.out.println("Invalid product ID. Try again.");
                 continue;
             }
+
             // Display discount information
             System.out.println("Discount Information:");
+//          Hardcoded discount
             System.out.println("1% discount for more than 10 units.");
             System.out.println("2% discount for more than 20 units.");
             System.out.println("5% discount for more than 100 units.");
@@ -58,7 +64,6 @@ public class Main {
             scanner.nextLine(); // Consume newline
 
             order.addProduct(selectedMaterial, quantity);
-
         }
 
         // Create a seasonal discount of 10%
